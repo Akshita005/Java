@@ -59,7 +59,7 @@ public class Bag<Element> implements Iterable<Element> {
      */
     public boolean contains(Element element) {
         Iterator<Element> iterator = this.iterator();
-        while (iterator.hasNext()) {
+        while (iterator.hasNext()) {        //checks if iterator has more elements to iterate//
             if (iterator.next().equals(element)) {
                 return true;
             }
@@ -114,7 +114,7 @@ public class Bag<Element> implements Iterable<Element> {
         bag.add("2");
 
         System.out.println("size of bag = " + bag.size());
-        for (String s : bag) {
+        for (String s : bag) {  //here we are using enhance for loop//
             System.out.println(s);
         }
 
