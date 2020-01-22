@@ -17,12 +17,12 @@ public class Factorial {
      */
     public static long factorial(int n) {
         if (n < 0) {
-            throw new ArithmeticException("n < 0");     //Dont work with less than 0
+            throw new ArithmeticException("n < 0"); //if n will be less than 0,then it will throw an Exception that is ArithmeticException//
         }
-        long fac = 1;
+        long fac = 1;   
         for (int i = 1; i <= n; ++i) {
-            fac *= i;
+            fac *= i;   //fac *=i is; is equivalent to fac=fac*i;//
         }
-        return fac; //Return factorial
+        return fac; //Return factorial  
     }
 }
