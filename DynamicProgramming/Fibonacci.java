@@ -16,8 +16,8 @@ public class Fibonacci {
     public static void main(String[] args) {
 
         // Methods all returning [0, 1, 1, 2, 3, 5, ...] for n = [0, 1, 2, 3, 4, 5, ...]
-        Scanner sc = new Scanner(System.in);
-        int n = sc.nextInt();
+        Scanner sc = new Scanner(System.in);        
+        int n = sc.nextInt();//get the element from user
         
         System.out.println(fibMemo(n));
         System.out.println(fibBotUp(n));
@@ -31,8 +31,8 @@ public class Fibonacci {
      * @param n The input n for which we have to determine the fibonacci number
      *          Outputs the nth fibonacci number
      **/
-    public static int fibMemo(int n) {
-        if (map.containsKey(n)) {
+    public static int fibMemo(int n) {      
+        if (map.containsKey(n)) {   //it tells us whether the map contains key or not
             return map.get(n);
         }
 
@@ -64,7 +64,7 @@ public class Fibonacci {
             } else {
                 f = fib.get(i - 1) + fib.get(i - 2);
             }
-            fib.put(i, f);
+            fib.put(i, f);  //adds elent in the map
         }
 
         return fib.get(n);
